@@ -18,76 +18,76 @@ layout: layout-single-page.njk
 
 
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds">
 
-<div class="app-cookies-page" data-module="app-cookies-page">
-
-
-<div class="js-cookies-page-error-summary" hidden>
-{{ govukErrorSummary({
-  titleText: "There is a problem",
-  errorList: [
-    {
-      text: "Select yes to accept analytics cookies",
-      href: "#analytics"
-    }
-  ]
-}) }}
-</div>
+    <div class="app-cookies-page" data-module="app-cookies-page">
 
 
-<div class="js-cookies-page-success" hidden>
-{{ govukNotificationBanner({
-  type: "success",
-  html: successNotificationBannerHtml
-}) }}
-</div>
+      <div class="js-cookies-page-error-summary" hidden>
+        {{ govukErrorSummary({
+          titleText: "There is a problem",
+          errorList: [
+            {
+              text: "Select yes to accept analytics cookies",
+              href: "#analytics"
+            }
+          ]
+        }) }}
+      </div>
 
 
-<div class="app-prose-scope">
-<div></div> {# hack to allow Markdown later on #}
+      <div class="js-cookies-page-success" hidden>
+        {{ govukNotificationBanner({
+          type: "success",
+          html: successNotificationBannerHtml
+        }) }}
+      </div>
 
 
-# Cookies
-
-[GOV.UK Design System](https://design-system.service.gov.uk/) puts small files (known as ‘cookies’) on your computer.
-
-
-## Essential cookies (strictly necessary)
+      <div class="app-prose-scope">
+        <div></div> {# hack to allow Markdown later on #}
 
 
-## Analytics cookies (optional)
+        # Cookies
 
-<div class="js-cookies-page-form-group" hidden>
-{{ govukRadios({
-  name: "analytics",
-  fieldset: {
-    legend: {
-      text: "Do you want to accept analytics cookies?"
-    }
-  },
-  items: [
-    {
-      text: "Yes",
-      value: "yes"
-    },
-    {
-      text: "No",
-      value: "no"
-    }
-  ]
-}) }}
-</div>
+        [GOV.UK Design System](https://design-system.service.gov.uk/) puts small files (known as ‘cookies’) on your computer.
 
 
-<div class="js-cookies-page-save" hidden>
-{{ govukButton({
-  text: 'Save cookie settings'
-}) }}
-</div>
+        ## Essential cookies (strictly necessary)
 
 
-</div>
-</div>
-</div>
+        ## Analytics cookies (optional)
+
+        <div class="js-cookies-page-form-group" hidden>
+          {{ govukRadios({
+            name: "analytics",
+            fieldset: {
+              legend: {
+                text: "Do you want to accept analytics cookies?"
+              }
+            },
+            items: [
+              {
+                text: "Yes",
+                value: "yes"
+              },
+              {
+                text: "No",
+                value: "no"
+              }
+            ]
+          }) }}
+        </div>
+
+
+        <div class="js-cookies-page-save" hidden>
+          {{ govukButton({
+            text: 'Save cookie settings'
+          }) }}
+        </div>
+
+
+      </div>
+    </div>
+  </div>
 </div>
